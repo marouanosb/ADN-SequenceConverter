@@ -1,2 +1,2 @@
 # ADN-SequenceConverter
-Converter for ADN Sequences
+Converter for ADN Sequences.
