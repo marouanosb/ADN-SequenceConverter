@@ -11,8 +11,9 @@
     <title>Convert Sequence</title>
 </head>
 <body>
+    <div class="side">
     <h1>Convert table : </h1>
-
+    <div>
     <input type="text" class="seq_units_dis" disabled="disabled" value="A"/> ⟶ <input type="text" class="seq_units" value="T"/>
     <br>
     <input type="text" class="seq_units_dis" disabled="disabled" value="T"/> ⟶ <input type="text" class="seq_units" value="A"/>
@@ -20,24 +21,29 @@
     <input type="text" class="seq_units_dis" disabled="disabled" value="C"> ⟶ <input type="text" class="seq_units" value="G"/>
     <br>
     <input type="text" class="seq_units_dis" disabled="disabled" value="G"/> ⟶ <input type="text" class="seq_units" value="C"/>
-    
+    </div>
+    </div>
+    <div class="side">
     <h1>Convert sequence :</h1>
     <input type="text" id="seq_full" onkeydown="return /^[ATCG]+$/i.test(event.key)">
+    <div>
     <button onclick="convert()">Convert</button>
     <button onclick="paste()">Paste</button>
-
+</div>
+        </div>
     <br><br>
 
     <div id="new_seq_div">
         <h1>New Sequence :</h1>
         <div id="new_seq_div2">
             <p id="new_seq"></p>
+            <div>
             <button id="invert" onclick="invert()">Invert</button>
             <button id="copy" onclick="copy()">Copy</button>
+        </div>
         </div>
         <div class="alert-box success">✔ Copied Successfully!</div>
     </div>
     
 </body>
 </html>
- 

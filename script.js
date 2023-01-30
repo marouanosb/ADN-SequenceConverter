@@ -58,7 +58,6 @@ async function paste(){
 
 function invert(){
     let new_s = document.getElementById("new_seq");
-
     new_s.innerText = new_s.innerText.split("").reverse().join("");
 }
 
@@ -68,20 +67,3 @@ async function copy(){
     $( "div.success" ).fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
 
 }
-
-// order : A , T , C , G
-// pattern="^[ATCG]+$"
-/*
-const queryOpts = {
-            name: "clipboard-read",
-            allowWithoutGesture: false,
-        };
-        const permissionStatus = await navigator.permissions.query(queryOpts);
-
-        permissionStatus.onchange = async () => {
-            if (permissionStatus.state === "granted") {
-                let text = await navigator.clipboard.readText();
-                inputElement.value = text;
-            }
-        };
-*/
