@@ -56,11 +56,16 @@ async function paste(){
     s.value = text;
 }
 
+function invert(){
+    let new_s = document.getElementById("new_seq");
+
+    new_s.innerText = new_s.innerText.split("").reverse().join("");
+}
+
 async function copy(){
     let s = document.getElementById("new_seq").innerHTML;
     navigator.clipboard.writeText(s);
     $( "div.success" ).fadeIn( 300 ).delay( 1500 ).fadeOut( 400 );
-
 
 }
 

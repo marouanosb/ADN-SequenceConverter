@@ -38,10 +38,7 @@ button{
 }
 
 #new_seq_div2{
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    
 }
 
 #new_seq{
