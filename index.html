@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <title>Convert Sequence</title>
+</head>
+<body>
+    <h1>Convert table : </h1>
+
+    <input type="text" class="seq_units_dis" disabled="disabled" value="A"/> ⟶ <input type="text" class="seq_units" value="T"/>
+    <br>
+    <input type="text" class="seq_units_dis" disabled="disabled" value="T"/> ⟶ <input type="text" class="seq_units" value="A"/>
+    <br>
+    <input type="text" class="seq_units_dis" disabled="disabled" value="C"> ⟶ <input type="text" class="seq_units" value="G"/>
+    <br>
+    <input type="text" class="seq_units_dis" disabled="disabled" value="G"/> ⟶ <input type="text" class="seq_units" value="C"/>
+    
+    <h1>Convert sequence :</h1>
+    <input type="text" id="seq_full" onkeydown="return /^[ATCG]+$/i.test(event.key)">
+    <button onclick="convert()">Convert</button>
+    <button onclick="paste()">Paste</button>
+
+    <br><br>
+
+    <div id="new_seq_div">
+        <h1>New Sequence :</h1>
+        <div id="new_seq_div2">
+            <p id="new_seq"></p>
+            <button id="copy" onclick="copy()">Copy</button>
+        </div>
+        <div class="alert-box success">✔ Copied Successfully!</div>
+    </div>
+    
+</body>
+</html>
+ 
